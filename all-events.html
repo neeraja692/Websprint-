@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ALL EVENTS - Flip Cards</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: rgb(252, 178, 87);
+      text-align: center;
+    }
+
+    h1 {
+      padding: 20px;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding-bottom: 40px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 650px;
+      height: 300px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+      background-color: rgb(179,188,238);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-image {
+      height: 200px;
+      border-radius: 15px 15px 0 0;
+      background-color: #aaa;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .flip-card-back {
+      background-color: rgb(179,188,238);
+      color: black;
+      transform: rotateY(180deg);
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .register-btn {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #ff7f50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<h1>All Events</h1>
+
+<div class="cards-container">
+
+  <!-- Flip Card 1 -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <div class="card-image" style="background-image:url('https://tse2.mm.bing.net/th/id/OIP.15Xo5Uaq8cQX81UPyuvcoQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3');"></div>
+        <div class="card-content">
+          <h3>Web Development Bootcamp</h3>
+          <p><strong>Date:</strong> 18 Jan 2026</p>
+          <p><strong>Council:</strong> CSI</p>
+        </div>
+      </div>
+      <div class="flip-card-back">
+        <h2>Web Development Bootcamp</h2>
+        <p><strong>Date:</strong> 18 Jan 2026</p>
+        <p><strong>Council:</strong> CSI</p>
+        <p><strong>Venue:</strong> Computer Lab</p>
+        <p><strong>Category:</strong> Technical</p>
+        <p><strong>Description:</strong> A hands-on workshop on HTML, CSS, and JavaScript. Participants will build a small web project and learn responsive design principles. Mentorship and live coding sessions included.</p>
+        <p><strong>Last Date to Register:</strong> 16 Jan 2026</p>
+        <a href="https://example.com/register-webdev" target="_blank" class="register-btn">Register Here</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flip Card 2 -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <div class="card-image" style="background-image:url('https://tse1.mm.bing.net/th/id/OIP.NHl66eUtu1oKvIPInxKUEgHaHa?w=600&h=600&rs=1&pid=ImgDetMain&o=7&rm=3');background-size: 30%;"></div>
+        <div class="card-content">
+          <h3>Startup Pitch Night</h3>
+          <p><strong>Date:</strong> 21 Jan 2026</p>
+          <p><strong>Council:</strong> E-Cell</p>
+        </div>
+      </div>
+      <div class="flip-card-back">
+        <h2>Startup Pitch Night</h2>
+        <p><strong>Date:</strong> 21 Jan 2026</p>
+        <p><strong>Council:</strong> E-Cell</p>
+        <p><strong>Venue:</strong> Seminar Hall</p>
+        <p><strong>Category:</strong> Entrepreneurship</p>
+        <p><strong>Description:</strong> Students pitch innovative startup ideas to mentors. Includes mentoring sessions, feedback, and networking opportunities. Best pitches will receive prizes and incubation guidance.</p>
+        <p><strong>Last Date to Register:</strong> 19 Jan 2026</p>
+        <a href="https://example.com/register-pitch" target="_blank" class="register-btn">Register Here</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

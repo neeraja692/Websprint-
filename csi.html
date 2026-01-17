@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSI Council Events</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: rgb(240, 240, 240);
+      text-align: center;
+    }
+
+    h1 {
+      padding: 20px;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding-bottom: 40px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 650px;
+      height: 300px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+      background-color: rgb(200,220,255);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-image {
+      height: 200px;
+      border-radius: 15px 15px 0 0;
+      background-color: #aaa; /* placeholder */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .flip-card-back {
+      background-color: rgb(200,220,255);
+      color: black;
+      transform: rotateY(180deg);
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .register-btn {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<h1>CSI Council Events</h1>
+
+<div class="cards-container">
+
+  <!-- Flip Card 1 -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <div class="card-image" style="background-image:url('https://cdn.slidesharecdn.com/ss_thumbnails/arbaazppt-231026055121-d4e32c78-thumbnail.jpg');"></div>
+        <div class="card-content">
+          <h3>AI & Machine Learning Workshop</h3>
+          <p><strong>Date:</strong> 20 Jan 2026</p>
+          <p><strong>Council:</strong> CSI</p>
+        </div>
+      </div>
+      <div class="flip-card-back">
+        <h2>AI & Machine Learning Workshop</h2>
+        <p><strong>Date:</strong> 20 Jan 2026</p>
+        <p><strong>Council:</strong> CSI</p>
+        <p><strong>Venue:</strong> Auditorium A</p>
+        <p><strong>Category:</strong> Technical</p>
+        <p><strong>Description:</strong> This hands-on workshop introduces AI and Machine Learning basics. Students will learn about algorithms, Python implementation, and real-life applications. Mentors will guide participants through mini-projects and exercises.</p>
+        <p><strong>Last Date to Register:</strong> 18 Jan 2026</p>
+        <a href="https://example.com/register-ai-ml" target="_blank" class="register-btn">Register Here</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flip Card 2 -->
+  
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <div class="card-image" style="background-image:url('https://static.vecteezy.com/system/resources/previews/025/466/198/large_2x/cyber-security-technology-concept-in-the-shape-of-sphere-with-hexagon-pattern-in-wireframe-hand-information-protect-and-safe-cyber-data-security-or-network-security-idea-illustration-vector.jpg');"></div>
+      <div class="card-content">
+        <h3>Cybersecurity Workshop</h3>
+        <p><strong>Date:</strong> 28 Jan 2026</p>
+        <p><strong>Council:</strong> CSI</p>
+      </div>
+    </div>
+    <div class="flip-card-back">
+      <h2>Cybersecurity Workshop</h2>
+      <p><strong>Date:</strong> 28 Jan 2026</p>
+      <p><strong>Council:</strong> CSI</p>
+      <p><strong>Venue:</strong> Lab 204</p>
+      <p><strong>Category:</strong> Technical</p>
+      <p><strong>Description:</strong> Learn the fundamentals of cybersecurity including network security, threat detection, and ethical hacking. Participants will perform hands-on exercises to identify vulnerabilities and secure systems effectively.</p>
+      <p><strong>Last Date to Register:</strong> 26 Jan 2026</p>
+      <a href="https://example.com/register-cybersecurity" target="_blank" class="register-btn">Register Here</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

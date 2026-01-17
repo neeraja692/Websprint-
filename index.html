@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EventHub: Campus Event Discovery Platform</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: peachpuff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 { color: aqua; font-size: 3em; margin-bottom: 0; }
+    h2 { margin-top: 5px; margin-bottom: 30px; }
+
+    .main-container {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      padding: 0 40px;
+      justify-content: center;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background-color: #d1d1d1;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .sidebar h3 { margin-bottom: 20px; }
+
+    .sidebar a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .sidebar div {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .sidebar img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #888;
+      margin-bottom: 5px;
+    }
+
+    /* Flip Cards */
+    .flip-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 600px;
+      height: 400px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+      background-color: rgb(179, 188, 238);
+    }
+
+    .flip-card-front img {
+      width: 100%;
+      height: 200px;
+      border-radius: 15px 15px 0 0;
+      object-fit: cover;
+    }
+
+    .flip-card-front h3 {
+      margin: 15px 15px 5px 15px;
+    }
+
+    .flip-card-front p {
+      margin: 5px 15px;
+    }
+
+    .flip-card-back {
+      background-color: rgb(255, 240, 200);
+      transform: rotateY(180deg);
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .flip-card-back h3 {
+      margin-top: 0;
+    }
+
+    .flip-card-back a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #ff7f50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>EventHub: Campus Event Discovery Platform</h1>
+<h2>THE UPCOMING EVENTS</h2>
+
+<div class="main-container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h3>Our Councils</h3>
+
+    <a href="all-events.html">
+      <div>
+        <img src="https://th.bing.com/th/id/OIP.otm7s8DDvP2NiIbD9-WE2QHaD4?w=304&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+        <p>ALL EVENTS</p>
+      </div>
+    </a>
+
+    <a href="csi.html">
+      <div>
+        <img src="https://th.bing.com/th/id/OIP.Z_sMU12iWE_PAjkZWoDJ1AHaHa?w=108&h=108&c=1&bgcl=032d74&r=0&o=7&dpr=1.3&pid=ImgRC&rm=3">
+        <p>CSI</p>
+      </div>
+    </a>
+
+    <a href="writers.html">
+      <div>
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQG7jGBfpHaTDg/profile-displayphoto-scale_400_400/B4DZkFFCepGQAs-/0/1756726831787?e=1770249600&v=beta&t=oPCOoua7lY5aTMPw9yPEPpVdPNHsmFVCzhopHpkbwtE">
+        <p>Writers Club</p>
+      </div>
+    </a>
+
+    
+      <div>
+        <img src="https://th.bing.com/th/id/OIP.U-4r7u7N4vrLFK5itdnvKAHaHa?w=108&h=108&c=1&bgcl=533278&r=0&o=7&dpr=1.3&pid=ImgRC&rm=3">
+        <p>E-Cell</p>
+      </div>
+  
+
+    
+      <div>
+        <img src="https://media.licdn.com/dms/image/v2/D4D0BAQHkbPoT81EWcA/company-logo_200_200/company-logo_200_200/0/1694698989588?e=1770249600&v=beta&t=GMxzdFJIX7pxJTejpeqvBtbkDl4Mb4ja348izJCeFUE">
+        <p>Student Council</p>
+      </div>
+    
+  </div>
+
+  <!-- Flip Cards Section -->
+  <div class="flip-container">
+
+    <!-- Card 1 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://cdn.slidesharecdn.com/ss_thumbnails/arbaazppt-231026055121-d4e32c78-thumbnail.jpg">
+          <h3>AI & Machine Learning Workshop</h3>
+          <p><strong>Date:</strong> 20 Jan 2026</p>
+          <p><strong>Council:</strong> CSI</p>
+        </div>
+        <div class="flip-card-back">
+          <h3>AI & Machine Learning Workshop</h3>
+          <p><strong>Date:</strong> 20 Jan 2026</p>
+          <p><strong>Council:</strong> CSI</p>
+          <p><strong>Venue:</strong> Auditorium A</p>
+          <p><strong>Category:</strong> Technical</p>
+          <p><strong>Description:</strong> Hands-on workshop where participants will explore AI & ML basics, work on real datasets, and build mini projects. Includes mentor sessions and Q&A.</p>
+          <p><strong>Last Date to Register:</strong> 18 Jan 2026</p>
+          <a href="https://example.com/register-ai" target="_blank">Register Here</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://crowdspring3-production.s3.amazonaws.com/project_entries/b5/ecec4ae0a6274a8ab8ba0233105b3676.jpg">
+          <h3>Startup Bootcamp</h3>
+          <p><strong>Date:</strong> 22 Jan 2026</p>
+          <p><strong>Council:</strong> E-Cell</p>
+        </div>
+        <div class="flip-card-back">
+          <h3>Startup Bootcamp</h3>
+          <p><strong>Date:</strong> 22 Jan 2026</p>
+          <p><strong>Council:</strong> E-Cell</p>
+          <p><strong>Venue:</strong> Seminar Hall</p>
+          <p><strong>Category:</strong> Entrepreneurship</p>
+          <p><strong>Description:</strong> Learn how to start your own startup from scratch. Includes mentorship sessions, idea validation, and pitching practice.</p>
+          <p><strong>Last Date to Register:</strong> 20 Jan 2026</p>
+          <a href="https://example.com/register-startup" target="_blank">Register Here</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://tse3.mm.bing.net/th/id/OIP.Z70Fr2QTuI-16qA_SJZAMwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3">
+          <h3>Dance Fest</h3>
+          <p><strong>Date:</strong> 25 Jan 2026</p>
+          <p><strong>Council:</strong> Cultural Council</p>
+        </div>
+        <div class="flip-card-back">
+          <h3>Dance Fest</h3>
+          <p><strong>Date:</strong> 25 Jan 2026</p>
+          <p><strong>Council:</strong> Cultural Council</p>
+          <p><strong>Venue:</strong> Open Ground</p>
+          <p><strong>Category:</strong> Cultural</p>
+          <p><strong>Description:</strong> A celebration of dance performances by various clubs. Includes workshops, competitions, and performances by professional choreographers.</p>
+          <p><strong>Last Date to Register:</strong> 23 Jan 2026</p>
+          <a href="https://example.com/register-dance" target="_blank">Register Here</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
